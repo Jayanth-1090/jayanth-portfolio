@@ -1,325 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jayanth H A - Embedded Software Portfolio</title>
-  <meta name="description" content="Professional portfolio of Jayanth H A, specializing in embedded software for automotive systems." />
-
-  <!-- Social preview -->
-  <meta property="og:title" content="Jayanth H A — Embedded Software Engineer" />
-  <meta property="og:description" content="Embedded software engineer skilled in C, C++, real-time systems and automotive software. Explore projects and resume." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jayanth-1090.github.io/jayanth-portfolio/" />
-  <meta property="og:image" content="https://placehold.co/1200x630/ffffff/4F46E5.png?text=Jayanth+H+A+Portfolio" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://placehold.co/1200x630/ffffff/4F46E5.png?text=Jayanth+H+A+Portfolio" />
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Fonts + AOS + Typed + Lucide + Particles -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <style>
-    /* ---------- Dark-mode forcing (minimal, non-invasive overrides) ---------- */
-    :root{
-      --site-bg: #0b1220;        /* page background */
-      --card-bg: rgba(255,255,255,0.03);
-      --muted: #94a3b8;
-      --primary: #4F46E5;
-      --primary-dark: #4338CA;
-    }
-    html,body{height:100%;}
-    body{
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg,#071024 0%, var(--site-bg) 100%);
-      color: #E6EEF8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    /* Convert common light classes to dark equivalents without changing layout */
-    .bg-white { background-color: var(--card-bg) !important; color: #E6EEF8 !important; border: 1px solid rgba(255,255,255,0.03); }
-    .bg-gray-50 { background-color: rgba(255,255,255,0.02) !important; }
-    .text-gray-700 { color: #cbd5e1 !important; }
-    .text-gray-600 { color: var(--muted) !important; }
-    .text-gray-500 { color: #9aa6b8 !important; }
-    .text-gray-400 { color: #94a3b8 !important; }
-    .border-gray-50 { border-color: rgba(255,255,255,0.03) !important; }
-    .border { border-color: rgba(255,255,255,0.03) !important; }
-
-    /* keep your accent colors */
-    .bg-gradient-primary { background: linear-gradient(135deg, var(--primary) 0%, #7C3AED 100%); }
-    .text-primary { color: var(--primary); }
-    .bg-primary { background-color: var(--primary); }
-    .bg-primary-hover:hover { background-color: var(--primary-dark); }
-
-    /* small card and shadow rules preserved for look */
-    .card { transition: transform .25s ease, box-shadow .25s ease; }
-    .card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,.5); }
-
-    /* Left-aligned timeline and about image (unchanged layout) */
-    .timeline { position: relative; padding-left: 3.5rem; }
-    .timeline::before {
-      content: ""; position: absolute; left:1.25rem; top:0; bottom:0; width:3px;
-      background: linear-gradient(180deg,var(--primary),var(--primary-dark)); border-radius:2px;
-    }
-    .timeline-item { position: relative; margin-bottom: 2.25rem; padding-top: 0.5rem; }
-    .timeline-dot { position: absolute; left: 0.9rem; top:0.5rem; width:14px; height:14px; border-radius:9999px; background: var(--primary); border:3px solid rgba(255,255,255,0.06); box-shadow: 0 4px 8px rgba(0,0,0,0.6); }
-    .timeline-content { margin-left: 1.5rem; }
-
-    .about-row { display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap; }
-    .about-image { width:192px; height:192px; flex-shrink:0; border-radius:9999px; overflow:hidden; border:4px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
-    .about-image img{ width:100%; height:100%; object-fit:cover; display:block; }
-
-    @media (max-width:640px){
-      .timeline{ padding-left:2.75rem; }
-      .timeline::before{ left:1rem; width:2px; }
-      .timeline-dot{ left:0.7rem; top:0.6rem; }
-      .about-image{ width:140px; height:140px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayanth H A - Embedded Software Portfolio</title>
+    <meta name="description" content="Professional portfolio of Jayanth H A, specializing in embedded software for automotive systems.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+        }
+        .text-primary {
+            color: #4F46E5;
+        }
+        .bg-primary {
+            background-color: #4F46E5;
+        }
+        .bg-primary-hover:hover {
+            background-color: #4338CA;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="bg-gray-900 text-gray-200">
 
-  <!-- Header: removed theme toggle button; minimal change -->
-  <header class="fixed inset-x-0 top-0 bg-white/5 shadow z-50">
-    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="text-2xl font-bold text-primary">Jayanth H A</a>
-
-      <nav class="hidden md:flex gap-6 text-gray-300">
-        <a href="#about" class="hover:text-white">About</a>
-        <a href="#skills" class="hover:text-white">Skills</a>
-        <a href="#experience" class="hover:text-white">Experience</a>
-        <a href="#projects" class="hover:text-white">Projects</a>
-        <a href="#certifications" class="hover:text-white">Certifications</a>
-        <a href="#contact" class="hover:text-white">Contact</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <!-- theme-switch removed as requested -->
-        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="open menu">
-          <svg class="w-6 h-6" data-lucide="menu"></svg>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobile-menu" class="hidden bg-white/5 md:hidden px-4 py-3">
-      <a href="#about" class="block py-2">About</a>
-      <a href="#skills" class="block py-2">Skills</a>
-      <a href="#experience" class="block py-2">Experience</a>
-      <a href="#projects" class="block py-2">Projects</a>
-      <a href="#certifications" class="block py-2">Certifications</a>
-      <a href="#contact" class="block py-2">Contact</a>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main class="pt-20">
-    <!-- Hero -->
-    <section id="home" class="relative min-h-[70vh] flex items-center justify-center bg-gradient-primary text-white">
-      <div id="particles-js" aria-hidden="true" class="absolute inset-0 opacity-30"></div>
-      <div class="container mx-auto px-4 relative z-10 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-3">Jayanth H A</h1>
-        <p class="text-lg md:text-2xl mb-6">Embedded Software Engineer | Automotive Specialist | <span id="typing-text" class="font-semibold"></span></p>
-        <div class="flex justify-center gap-3">
-          <a href="resume.pdf" download class="px-5 py-2 bg-white text-primary rounded-full font-medium">Download Resume</a>
-          <a href="#contact" class="px-5 py-2 border-2 border-white rounded-full">Contact Me</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">About Me</h2>
-        <div class="about-row mx-auto max-w-4xl">
-          <div class="about-image">
-            <img src="Pict.jpg" alt="Jayanth H A" onerror="this.onerror=null; this.src='https://placehold.co/200x200?text=No+Image'">
-          </div>
-          <div class="flex-1">
-            <p class="mb-3 text-lg">I am an Embedded Software Engineer with 2.5+ years of experience building real-time systems for automotive applications. I specialize in C/C++, real-time performance, CAN bus, AVB/RTP streaming, and AUTOSAR-related signal handling.</p>
-            <p class="mb-3 text-lg">Looking for opportunities to design reliable, low-latency vehicle systems and to contribute to safety-critical embedded products.</p>
-            <p class="text-sm text-gray-400">DOB: 24 Jan 2001 · Languages: English, Hindi, Kannada, Telugu</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">Languages</h3>
-            <ul class="space-y-1"><li>C</li><li>C++</li></ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">Platforms</h3>
-            <ul class="space-y-1"><li>Embedded Linux</li><li>Windows</li></ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">Protocols</h3>
-            <ul class="space-y-1"><li>CAN</li><li>Ethernet / RTP / AVB</li><li>TCP / UDP</li></ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">Tools</h3>
-            <ul class="space-y-1"><li>Bazel, CMake, Clang</li><li>Vector CANoe</li><li>Git / Gerrit / Plastic SCM</li></ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">Specializations</h3>
-            <ul class="space-y-1"><li>Real-time Optimization</li><li>MISRA & safety-aware coding</li><li>POSIX multi-threading</li></ul>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-3">IDE</h3>
-            <ul class="space-y-1"><li>VS Code</li><li>Cursor</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">Experience</h2>
-
-        <div class="timeline max-w-4xl mx-auto">
-          <div class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="bg-white p-6 rounded-lg card">
-                <h3 class="font-semibold">Software Engineer — Actevia Technology Services Pvt Ltd</h3>
-                <p class="text-sm italic mb-2">Jan 2024 – Present · Bengaluru</p>
-                <p class="mb-2">Embedded software development focused on SiL frameworks and multimedia streaming for automotive systems.</p>
-
-                <h4 class="font-semibold mt-3">Re Simulation (SiL)</h4>
-                <ul class="list-disc pl-5 mt-2 space-y-1 text-sm">
-                  <li>Built and maintained a Software-in-the-Loop framework in C/C++ for ADAS scenarios.</li>
-                  <li>Integrated multi-sensor simulation modules and validated signal processing flows.</li>
-                  <li>CAN handling with AUTOSAR-aligned signal mapping using Vector CANoe.</li>
-                </ul>
-
-                <h4 class="font-semibold mt-3">Audio Video Bridging (AVB)</h4>
-                <ul class="list-disc pl-5 mt-2 space-y-1 text-sm">
-                  <li>Implemented RTP-based streaming on embedded Linux (ALSA, GStreamer).</li>
-                  <li>Optimized resource allocations for low-latency on automotive Ethernet.</li>
-                </ul>
-              </div>
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-gray-800 shadow-lg z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-primary">Jayanth H A</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-primary">Home</a>
+                <a href="#about" class="hover:text-primary">About</a>
+                <a href="#skills" class="hover:text-primary">Skills</a>
+                <a href="#experience" class="hover:text-primary">Experience</a>
+                <a href="#projects" class="hover:text-primary">Projects</a>
+                <a href="#education" class="hover:text-primary">Education</a>
+                <a href="#certifications" class="hover:text-primary">Certifications</a>
+                <a href="#contact" class="hover:text-primary">Contact</a>
             </div>
-          </div>
-          <!-- duplicate timeline-item blocks here to add more entries -->
+            <div class="flex items-center space-x-4">
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <svg class="w-6 h-6" data-lucide="menu"></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 hover:text-primary">About</a>
+            <a href="#skills" class="block py-2 hover:text-primary">Skills</a>
+            <a href="#experience" class="block py-2 hover:text-primary">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-primary">Projects</a>
+            <a href="#education" class="block py-2 hover:text-primary">Education</a>
+            <a href="#certifications" class="block py-2 hover:text-primary">Certifications</a>
+            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
         </div>
-      </div>
+    </header>
+
+    <!-- Hero Section with Particles -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-primary text-white overflow-hidden" data-aos="zoom-in">
+        <div id="particles-js"></div>
+        <div class="container mx-auto px-4 text-center z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Jayanth H A</h1>
+            <p class="text-xl md:text-3xl mb-8">Embedded Software Engineer | Automotive Specialist | <span id="typing-text"></span></p>
+            <div class="space-x-4">
+                <a href="resume.pdf" download class="px-6 py-3 bg-white text-primary rounded-full hover:bg-gray-100">Download Resume</a>
+                <a href="#contact" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-primary">Contact Me</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-2">V2X Vehicle Localization</h3>
-            <p class="text-sm italic mb-2">Oct 2022 – Feb 2023</p>
-            <p>Raspberry Pi + NRF24L01 + GPS for V2X using IEEE 802.11p; designed comms & localization logic.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-2">Sarcasm Detection</h3>
-            <p class="text-sm italic mb-2">Feb – Mar 2023</p>
-            <p>ML model and pipelines to detect sarcasm using custom features and dataset engineering.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg card">
-            <h3 class="font-semibold mb-2">Movie Tickets System</h3>
-            <p class="text-sm italic mb-2">May 2021</p>
-            <p>PHP frontend + SQL backend for booking and transactional seat allocation flow.</p>
-          </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800" data-aos="fade-right">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img src="Pict.jpg" alt="Jayanth H A" class="w-48 h-48 rounded-full shadow-lg object-cover" onerror="this.src='https://placehold.co/200x200';">
+                <div>
+                    <p class="text-lg mb-4">With 2.5+ years in embedded software for automotive, expert in C/C++, real-time systems, CAN, RTP, AVB. Seeking roles to innovate in vehicle electronics and safety.</p>
+                    <p class="text-lg mb-4">DOB: 24 Jan 2001 | Languages: English, Hindi, Kannada, Telugu | Hobbies: Drawing, Travelling, Music.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-3xl">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">Education</h2>
-        <div class="space-y-4">
-          <div class="bg-white p-4 rounded-lg card">
-            <h3 class="font-semibold">B.E. Computer Science</h3>
-            <p class="text-sm italic">Adichunchanagiri Institute, 2018–2023 — CGPA: 6.5/10</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg card">
-            <h3 class="font-semibold">12th Standard</h3>
-            <p class="text-sm italic">Master’s PU College — 76.33%</p>
-          </div>
-          <div class="bg-white p-4 rounded-lg card">
-            <h3 class="font-semibold">10th Standard</h3>
-            <p class="text-sm italic">Royal Apollo International School — 88.98%</p>
-          </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20" data-aos="fade-left">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="code"></svg>Languages</h3>
+                    <ul class="space-y-2">
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="server"></svg>Platforms</h3>
+                    <ul class="space-y-2">
+                        <li>Linux</li>
+                        <li>Windows</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="network"></svg>Protocols</h3>
+                    <ul class="space-y-2">
+                        <li>CAN</li>
+                        <li>Ethernet, RTP, AVB</li>
+                        <li>TCP, UDP</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="wrench"></svg>Tools</h3>
+                    <ul class="space-y-2">
+                        <li>Bazel, CMake, Clang</li>
+                        <li>Git/Gerrit, Plastic SCM</li>
+                        <li>Vector CANoe</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="cpu"></svg>Specializations</h3>
+                    <ul class="space-y-2">
+                        <li>Real-time Optimization</li>
+                        <li>MISRA Compliance</li>
+                        <li>Multi-threaded (POSIX)</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><svg class="w-5 mr-2 text-primary" data-lucide="edit"></svg>IDE</h3>
+                    <ul class="space-y-2">
+                        <li>VS Code</li>
+                        <li>Cursor</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Certifications -->
-    <section id="certifications" class="py-16">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-2xl md:text-3xl font-bold text-primary text-center mb-8">Certifications</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-white p-4 rounded-lg card">Python Programming (University of Michigan, Coursera)</div>
-          <div class="bg-white p-4 rounded-lg card">Command Line (Progate)</div>
-          <div class="bg-white p-4 rounded-lg card">Mastering C++ (Codedamn)</div>
-          <div class="bg-white p-4 rounded-lg card">Technical Support Fundamentals (Coursera)</div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Experience</h2>
+            <div class="relative">
+                <div class="absolute left-4 w-0.5 h-full bg-primary"></div>
+                <div class="ml-12">
+                    <div class="mb-8">
+                        <div class="bg-gray-900 p-6 rounded-lg card relative">
+                            <div class="absolute top-4 -left-5 w-4 h-4 bg-primary rounded-full"></div>
+                            <h3 class="text-xl font-semibold">Software Engineer — Actevia Technology Services Pvt Ltd</h3>
+                            <p class="text-sm italic">Jan 2024 - Present · Bengaluru</p>
+                            <p class="mt-2">Embedded software development focused on SiL frameworks and multimedia streaming for automotive systems.</p>
+                            <h4 class="font-semibold mt-4">Re Simulation (SiL)</h4>
+                            <ul class="list-disc pl-4 text-sm">
+                                <li>Built and maintained a Software-in-the-Loop framework in C/C++ for ADAS scenarios.</li>
+                                <li>Integrated multi-sensor simulation modules and validated signal processing flows.</li>
+                                <li>CAN handling with AUTOSAR-aligned signal mapping using Vector CANoe.</li>
+                            </ul>
+                            <h4 class="font-semibold mt-4">Audio Video Bridging (AVB)</h4>
+                            <ul class="list-disc pl-4 text-sm">
+                                <li>Implemented RTP-based streaming on embedded Linux (ALSA, GStreamer).</li>
+                                <li>Optimized resource allocations for low-latency on automotive Ethernet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-gradient-primary text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact Me</h2>
-        <p class="mb-4">Open to opportunities in embedded automotive software.</p>
-        <div class="flex flex-wrap justify-center gap-3 mb-4">
-          <a href="mailto:jayanthjayy12@gmail.com" class="px-4 py-2 bg-white text-primary rounded-full">Email</a>
-          <a href="https://www.linkedin.com/in/h-a-jayanth/" target="_blank" class="px-4 py-2 border-2 border-white rounded-full">LinkedIn</a>
-          <a href="https://github.com/Jayanth-1090" target="_blank" class="px-4 py-2 border-2 border-white rounded-full">GitHub</a>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-2">V2X Vehicle Localization</h3>
+                    <p class="text-sm italic mb-4">Oct 2022 - Feb 2023</p>
+                    <p>Used Raspberry Pi, NRF24L01, GPS for V2X with IEEE 802.11p. Simulated traffic for safety.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-2">Sarcasm Detection</h3>
+                    <p class="text-sm italic mb-4">Feb - Mar 2023</p>
+                    <p>ML model with dataset, feature engineering for sarcasm nuances.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold mb-2">Movie Tickets System</h3>
+                    <p class="text-sm italic mb-4">May 2021</p>
+                    <p>PHP frontend, SQL backend for booking management.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://github.com/Jayanth-1090" target="_blank" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-hover inline-flex items-center">
+                    <svg class="w-5 mr-2" data-lucide="github"></svg> GitHub
+                </a>
+            </div>
         </div>
-        <p class="text-sm">Phone: +91-7483146896</p>
-      </div>
     </section>
-  </main>
 
-  <footer class="py-6 bg-gray-900 text-gray-300 text-center">
-    <div class="container mx-auto px-4">© 2025 Jayanth H A. All rights reserved.</div>
-  </footer>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-800" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Education</h2>
+            <div class="space-y-8 max-w-2xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold">B.E. Computer Science</h3>
+                    <p class="text-sm italic">Adichunchanagiri Institute, 2018-2023</p>
+                    <p>CGPA: 6.5/10</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold">12th Standard</h3>
+                    <p class="text-sm italic">Master’s PU College, 2017-2019</p>
+                    <p>76.33%</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg card">
+                    <h3 class="text-xl font-semibold">10th Standard</h3>
+                    <p class="text-sm italic">Royal Apollo International School, 2015-2016</p>
+                    <p>88.98%</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.AOS) AOS.init();
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-primary">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>Python Programming (University of Michigan, Coursera)</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>Command Line (Progate)</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>Mastering C++ (Codedamn)</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>Technical Support Fundamentals (Coursera)</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>Penetration Testing & Forensics (IBM)</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg card">
+                    <p>ISC2 CC Training (ISC2)</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      if (window.lucide) lucide.createIcons();
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-primary text-white" data-aos="fade-up">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Contact Me</h2>
+            <p class="mb-8">Open to opportunities in embedded automotive software.</p>
+            <div class="space-x-4 mb-4">
+                <a href="mailto:jayanthjayy12@gmail.com" class="px-6 py-3 bg-white text-primary rounded-full hover:bg-gray-100 inline-flex items-center">
+                    <svg class="w-5 mr-2" data-lucide="mail"></svg> Email
+                </a>
+                <a href="https://linkedin.com/in/jayanth-h-a-674400222" target="_blank" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-primary inline-flex items-center">
+                    <svg class="w-5 mr-2" data-lucide="linkedin"></svg> LinkedIn
+                </a>
+                <a href="https://github.com/Jayanth-1090" target="_blank" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white hover:text-primary inline-flex items-center">
+                    <svg class="w-5 mr-2" data-lucide="github"></svg> GitHub
+                </a>
+            </div>
+            <p>Phone: +91-7483146896</p>
+        </div>
+    </section>
 
-      if (window.particlesJS) {
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-4 text-center">
+        <p>&copy; 2025 Jayanth H A. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        lucide.createIcons();
+
+        // Particles
         particlesJS('particles-js', {
-          particles: { number: { value: 50 }, color: { value: '#ffffff' }, shape: { type: 'circle' }, opacity: { value: 0.45 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.35, width: 1 }, move: { enable: true, speed: 2 } },
-          interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } }, modes: { repulse: { distance: 100 } } },
-          retina_detect: true
+            particles: { number: { value: 80 }, color: { value: '#ffffff' }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 }, move: { enable: true, speed: 2 } },
+            interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } }, modes: { repulse: { distance: 100 } } },
+            retina_detect: true
         });
-      }
 
-      if (window.Typed) {
-        new Typed('#typing-text', { strings: ['Real-Time Expert', 'Innovator', 'Problem Solver'], typeSpeed: 60, backSpeed: 40, loop: true });
-      }
+        // Typing
+        new Typed('#typing-text', {
+            strings: ['Real-Time Expert', 'Innovator', 'Problem Solver'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
 
-      // mobile menu toggle
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileMenu) mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    });
-  </script>
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+
 </body>
 </html>
