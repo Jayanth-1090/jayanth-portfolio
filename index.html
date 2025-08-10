@@ -15,7 +15,7 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <style>
       /* Custom styles for smooth scrolling and a clean theme */
@@ -31,11 +31,14 @@
       html.dark {
         color-scheme: dark;
       }
-      .bg-accent-orange {
-        background-color: #F5A623;
+      .bg-accent {
+        background-color: #6366F1;
       }
-      .bg-accent-orange:hover {
-        background-color: #e4911d; /* Slightly darker orange on hover */
+      .text-accent {
+        color: #6366F1;
+      }
+      .bg-accent-hover:hover {
+        background-color: #4338CA;
       }
       /* Animation for fade-in effect on scroll */
       .fade-in-section {
@@ -47,25 +50,31 @@
         opacity: 1;
         transform: translateY(0);
       }
+      /* Custom shadow for cards */
+      .card-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .dark .card-shadow {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
     </style>
   </head>
-  <body class="bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-gray-100 transition-colors duration-500">
+  <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50 transition-colors duration-500">
     <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-md">
-      <nav class="container mx-auto px-4 py-4 flex justify-between items-center transition-colors duration-500">
-        <a href="#hero" class="text-xl font-bold text-gray-900 dark:text-gray-100">
+    <header class="sticky top-0 z-50 bg-white/70 dark:bg-gray-950/70 backdrop-blur-md shadow-lg transition-colors duration-500">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="#hero" class="text-xl font-bold text-gray-900 dark:text-gray-50">
           Jayanth H A
         </a>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-6">
           <ul class="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
-            <li><a href="#about" class="hover:text-blue-500 dark:hover:text-blue-400">About</a></li>
-            <li><a href="#skills" class="hover:text-blue-500 dark:hover:text-blue-400">Skills</a></li>
-            <li><a href="#experience" class="hover:text-blue-500 dark:hover:text-blue-400">Experience</a></li>
-            <li><a href="#projects" class="hover:text-blue-500 dark:hover:text-blue-400">Projects</a></li>
-            <li><a href="#education" class="hover:text-blue-500 dark:hover:text-blue-400">Education</a></li>
-            <li><a href="#contact" class="hover:text-blue-500 dark:hover:text-blue-400">Contact</a></li>
+            <li><a href="#about" class="hover:text-accent">About</a></li>
+            <li><a href="#skills" class="hover:text-accent">Skills</a></li>
+            <li><a href="#experience" class="hover:text-accent">Experience</a></li>
+            <li><a href="#projects" class="hover:text-accent">Projects</a></li>
+            <li><a href="#contact" class="hover:text-accent">Contact</a></li>
           </ul>
-          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors duration-300">
+          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-300">
             <!-- Icon is dynamically replaced by JavaScript -->
           </button>
         </div>
@@ -74,25 +83,22 @@
 
     <main class="font-sans min-h-screen">
       <!-- Hero Section -->
-      <section id="hero" class="fade-in-section min-h-screen flex items-center justify-center text-center bg-gray-50 dark:bg-zinc-950 transition-colors duration-500">
+      <section id="hero" class="fade-in-section min-h-screen flex items-center justify-center text-center bg-white dark:bg-gray-950 transition-colors duration-500">
         <div class="container mx-auto px-4 py-16">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-gray-100">
-            Jayanth H A
+          <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-gray-50 leading-tight">
+            Hi, I'm <span class="text-accent">Jayanth H A</span>.
           </h1>
-          <p class="mt-4 text-xl sm:text-2xl text-blue-500 dark:text-blue-400 font-medium">
-            Embedded Software Engineer, Automotive Domain
+          <p class="mt-4 text-xl sm:text-2xl text-gray-600 dark:text-gray-400 font-medium max-w-4xl mx-auto">
+            An Embedded Software Engineer passionate about crafting real-time systems and innovative solutions for the automotive industry.
           </p>
-          <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto italic">
-            “Seeking a dynamic and challenging role to leverage my expertise in C, C++, and real-time systems.”
-          </p>
-          <div class="mt-8 flex justify-center space-x-4">
+          <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <!-- Link to the resume file - updated to the GitHub raw URL -->
-            <a href="https://github.com/Jayanth-1090/jayanth-portfolio/raw/main/resume.pdf" download="resume.pdf" class="group inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-cloud mr-2 h-5 w-5 group-hover:animate-bounce"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+            <a href="https://github.com/Jayanth-1090/jayanth-portfolio/raw/main/resume.pdf" download="resume.pdf" class="group inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full shadow-lg text-white bg-accent hover:bg-accent-hover transition-all duration-300 transform hover:-translate-y-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download mr-3 h-6 w-6 group-hover:animate-bounce"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
               <span>Download Resume</span>
             </a>
-            <a href="#contact" class="group inline-flex items-center px-6 py-3 border border-blue-600 dark:border-blue-400 text-base font-medium rounded-full text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-zinc-800 transition-all duration-300 transform hover:scale-105">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-2 h-5 w-5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="#contact" class="group inline-flex items-center px-8 py-4 border-2 border-accent text-lg font-semibold rounded-full text-accent hover:bg-accent-hover hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-3 h-6 w-6 group-hover:text-white"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               <span>Contact Me</span>
             </a>
           </div>
@@ -100,25 +106,23 @@
       </section>
 
       <!-- About Me Section -->
-      <section id="about" class="fade-in-section bg-gray-100 dark:bg-zinc-900 py-16 transition-colors duration-500">
+      <section id="about" class="fade-in-section bg-gray-50 dark:bg-gray-900 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
             About Me
           </h2>
-          <!-- Updated alignment to center items vertically -->
-          <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div class="w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0 relative">
-              <!-- Image source changed to 'Pict.jpg' -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+            <div class="w-64 h-64 flex-shrink-0 relative">
               <img
                 src="Pict.jpg"
                 alt="Jayanth H A"
-                class="w-full h-full object-cover rounded-full shadow-xl border-4 border-blue-400 dark:border-blue-600"
-                onerror="this.onerror=null; this.src='https://placehold.co/256x256/0055a4/f8f9fa?text=Pict.jpg';"
+                class="w-full h-full object-cover rounded-full shadow-2xl border-4 border-accent"
+                onerror="this.onerror=null; this.src='https://placehold.co/256x256/6366F1/FFFFFF?text=Jayanth+H+A';"
               />
             </div>
-            <div class="text-gray-700 dark:text-gray-300 md:max-w-xl text-center md:text-left">
+            <div class="text-gray-600 dark:text-gray-400 md:max-w-xl text-center md:text-left">
               <p class="text-lg leading-relaxed">
-                With over 2.5 years of specialized experience in embedded software development for the automotive sector, I am seeking a dynamic and challenging role to leverage my expertise in C, C++, and real-time systems. I am proficient in modern C++, real-time performance optimization, MISRA compliance, and multi-threaded application development using POSIX APIs on embedded Linux.
+                With over 2.5 years of specialized experience in embedded software development for the automotive sector, I am seeking a dynamic and challenging role to leverage my expertise in C, C++, and real-time systems. I am proficient in modern C++, real-time performance optimization, MISRA compliance, and multi-threaded application development using POSIX APIs on embedded Linux. My passion lies in building robust, high-performance systems that drive innovation in vehicle electronics and safety.
               </p>
             </div>
           </div>
@@ -126,83 +130,79 @@
       </section>
 
       <!-- Skills Section -->
-      <section id="skills" class="fade-in-section bg-white dark:bg-zinc-950 py-16 transition-colors duration-500">
+      <section id="skills" class="fade-in-section bg-white dark:bg-gray-950 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
-            Skills
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
+            My Skills
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <!-- Programming Languages -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Programming Languages</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="M14.5 4l-5 16"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Languages</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>C</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>C++</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>C</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>C++</span></li>
               </ul>
             </div>
             <!-- Platforms -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Platforms</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-server"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Platforms</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Linux</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Windows</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Linux</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Windows</span></li>
               </ul>
             </div>
             <!-- Protocols -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 9.1-5.24"/><path d="M12 22v-8.7"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Protocols</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 9.1-5.24"/><path d="M12 22v-8.7"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Protocols</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>CAN</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Ethernet</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>RTP</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>TCP</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>UDP</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>CAN</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Ethernet, RTP</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>TCP, UDP</span></li>
               </ul>
             </div>
             <!-- Tools -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a6 6 0 0 1-7.94-7.94l3.77-3.77a1 1 0 0 0 0-1.4l1.6-1.6a1 1 0 0 0 1.4 0l3.77 3.77a6 6 0 0 1 7.94-7.94z"/><path d="M16 16v.01"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Tools</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-3.77 3.77a6 6 0 0 1-7.94-7.94l3.77-3.77a1 1 0 0 0 0-1.4l1.6-1.6a1 1 0 0 0 1.4 0l3.77 3.77a6 6 0 0 1 7.94-7.94z"/><path d="M16 16v.01"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Tools</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Bazel</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>CMake</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Clang Compiler</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Git/Gerrit</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Vector CANoe</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Plastic SCM</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>CMake</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Git/Gerrit, Plastic SCM</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Vector CANoe</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Bazel</span></li>
               </ul>
             </div>
             <!-- Specializations -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="5" y="5" width="14" height="14" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M22 12h-4"/><path d="M6 12H2"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Specializations</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu"><rect x="5" y="5" width="14" height="14" rx="2" ry="2"/><path d="M9 9h6v6H9z"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M22 12h-4"/><path d="M6 12H2"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Specializations</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Real-time Performance Optimization</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>MISRA Compliance</span></li>
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Multi-threaded Programming (POSIX APIs)</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Real-time Performance Optimization</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>MISRA Compliance</span></li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Multi-threaded Programming</span></li>
               </ul>
             </div>
             <!-- Methodologies -->
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div class="flex items-center text-blue-600 dark:text-blue-400 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" y1="3" x2="6" y2="15"/><path d="M18 6V3"/><path d="M18 9v12"/><path d="M12 21V9"/><path d="M6 21V9"/><circle cx="12" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="21" r="3"/><circle cx="18" cy="21" r="3"/></svg>
-                <h3 class="ml-3 text-xl font-semibold text-gray-900 dark:text-gray-100">Methodologies</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex items-center text-accent mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><path d="M22 12h-4"/><path d="M2 12h4"/><path d="M12 2a10 10 0 0 1 10 10v0a10 10 0 0 1-10 10v0a10 10 0 0 1-10-10v0a10 10 0 0 1 10-10z"/></svg>
+                <h3 class="ml-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">Methodologies</h3>
               </div>
-              <ul class="list-none space-y-2 text-gray-700 dark:text-gray-300">
-                <li class="flex items-center"><span class="w-2 h-2 bg-accent-orange rounded-full mr-3 flex-shrink-0"></span><span>Git-based workflows</span></li>
+              <ul class="list-none space-y-3 text-gray-700 dark:text-gray-300">
+                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0"></span><span>Git-based workflows</span></li>
               </ul>
             </div>
           </div>
@@ -210,108 +210,95 @@
       </section>
 
       <!-- Experience Section -->
-      <section id="experience" class="fade-in-section bg-gray-100 dark:bg-zinc-900 py-16 transition-colors duration-500">
+      <section id="experience" class="fade-in-section bg-gray-50 dark:bg-gray-900 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
-            Experience
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
+            Work Experience
           </h2>
-          <div class="relative pl-6 md:pl-12 pb-12 last:pb-0">
-            <div class="absolute left-0 top-0 h-full w-1 bg-blue-600 dark:bg-blue-400"></div>
-            <div class="absolute left-[-6px] top-0 h-3 w-3 rounded-full bg-blue-600 dark:bg-blue-400 z-10"></div>
-            <div class="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow-lg ml-6 md:ml-0 transition-all duration-300 hover:shadow-2xl">
-              <div class="flex items-center space-x-4 mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V7h-4V2h-4v5h-4v14z"/></svg>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Software Engineer</h3>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 text-lg">Actevia Technology Services Pvt Ltd</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400 italic mt-1">Jan 2024 – Present</p>
+          <div class="relative max-w-3xl mx-auto">
+            <!-- Timeline Line -->
+            <div class="absolute left-6 md:left-1/2 top-0 h-full w-1 bg-gray-200 dark:bg-gray-700"></div>
+            <!-- Timeline Item 1 -->
+            <div class="mb-12 flex flex-col md:flex-row md:justify-end md:relative">
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl card-shadow hover:shadow-xl transition-all duration-300">
+                  <div class="flex items-center justify-start md:justify-end text-accent mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase h-6 w-6 mr-3 md:mr-0 md:ml-3"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V7h-4V2h-4v5h-4v14z"/></svg>
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-50">Actevia Technology Services Pvt Ltd</h3>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-400 text-lg md:text-right">Software Engineer</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 italic mt-1 md:text-right">Jan 2024 – Present</p>
 
-              <div class="mt-6 border-t border-gray-200 dark:border-zinc-700 pt-4">
-                <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Re Simulation (SIL)</h4>
-                <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>Engineered and maintained a Software-in-the-Loop (SiL) framework using C and C++ for ADAS validation.</li>
-                  <li>Integrated ADAS modules, handled AUTOSAR-compliant CAN signal logic, and optimized performance via static analysis.</li>
-                  <li>Managed Git-based workflows to maintain code integrity across development teams.</li>
-                </ul>
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mt-6 text-left">Project: Re Simulation (Software In Loop - SiL)</h4>
+                  <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300 mt-2 text-left">
+                    <li>Engineered and maintained the Software-in-the-Loop (SiL) framework using C/C++, enabling PC-based multi-sensor virtual test drives for ADAS validation.</li>
+                    <li>Developed and validated AUTOSAR-compliant CAN signal handling logic using Vector CANoe and CAPL scripting.</li>
+                    <li>Managed Git-based workflows, including branching, merging, and conflict resolution, to maintain code integrity.</li>
+                    <li>Optimized system performance through static analysis and memory profiling, implementing code refactoring to reduce RAM usage and improve execution speed.</li>
+                  </ul>
+
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-50 mt-6 text-left">Project: Audio Video Bridging (AVB)</h4>
+                  <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300 mt-2 text-left">
+                    <li>Implemented a real-time audio/video streaming solution using RTP over TCP and UDP on embedded Linux, utilizing multi-threaded programming with POSIX APIs for low-latency performance.</li>
+                    <li>Designed and optimized resource allocation, including memory footprint and CPU core usage, to ensure efficient operation on automotive Ethernet networks.</li>
+                    <li>Integrated RTP streams with ALSA and GStreamer pipelines for synchronized multimedia playback and device routing.</li>
+                    <li>Conducted network performance validation, analyzing latency, jitter, and packet loss to ensure reliable transmission in test vehicle environments.</li>
+                  </ul>
+                </div>
               </div>
-              <div class="mt-6 border-t border-gray-200 dark:border-zinc-700 pt-4">
-                <h4 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Audio Video Bridging</h4>
-                <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>Implemented RTP over TCP/UDP streaming on embedded Linux using POSIX APIs.</li>
-                  <li>Integrated RTP streams with ALSA & GStreamer pipelines for synchronized multimedia playback.</li>
-                  <li>Optimized resource allocation and conducted network performance validation.</li>
-                </ul>
-              </div>
+              <div class="absolute w-6 h-6 rounded-full bg-accent left-3 md:left-[49.5%] top-8 z-10 border-4 border-white dark:border-gray-900"></div>
             </div>
+            <!-- End of Timeline Item 1 -->
           </div>
         </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="fade-in-section bg-white dark:bg-zinc-950 py-16 transition-colors duration-500">
+      <section id="projects" class="fade-in-section bg-white dark:bg-gray-950 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
             Projects
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">An Efficient V2X Vehicle Localization</h3>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">Used Raspberry Pi, NRF24L01, GPS, and IEEE 802.11p for a single RSU & receiver architecture to support real-time vehicle localization.</p>
-              </div>
-              <div class="mt-auto">
-                <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link mr-2 h-4 w-4"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L9.44 10.6"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                  View Project
-                </a>
+                <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-4">An Efficient V2X Vehicle Localization</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">This college project utilized a Raspberry Pi, NRF24L01, GPS, and IEEE 802.11p for a single RSU & receiver architecture to support real-time vehicle localization. It involved designing the system architecture and implementing communication protocols.</p>
               </div>
             </div>
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Sarcasm Detection</h3>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">Developed a robust sarcasm detection ML model using advanced machine learning techniques on a custom dataset during an internship at Fundamentals Pvt Ltd.</p>
-              </div>
-              <div class="mt-auto">
-                <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link mr-2 h-4 w-4"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L9.44 10.6"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                  View Project
-                </a>
+                <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-4">Sarcasm Detection</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">As part of an internship, I developed a robust sarcasm detection ML model using advanced machine learning techniques on a custom dataset. The project focused on natural language processing and model training.</p>
               </div>
             </div>
-            <div class="bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl card-shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Movie Tickets Booking Management System</h3>
-                <p class="text-gray-700 dark:text-gray-300 mb-4">Designed a movie ticket booking system using PHP for the frontend and SQL for the backend, utilizing DBMS for seamless data storage and retrieval.</p>
-              </div>
-              <div class="mt-auto">
-                <a href="#" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link mr-2 h-4 w-4"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07L9.44 10.6"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                  View Project
-                </a>
+                <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-4">Movie Tickets Booking Management System</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-6">This project was a college assignment where I designed a movie ticket booking system using PHP for the frontend and SQL for the backend, utilizing DBMS for seamless data storage and retrieval.</p>
               </div>
             </div>
-            <!-- View more button -->
-            <div class="col-span-full mt-8 text-center">
-              <a href="https://github.com/jayanthjayy12" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center px-6 py-3 border border-blue-600 dark:border-blue-400 text-base font-medium rounded-full text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-zinc-800 transition-all duration-300 transform hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-2 h-5 w-5"><path d="M15 22.1c-2.4 0-4.6-.9-6.3-2.6-1.7-1.7-2.6-3.9-2.6-6.3S6 8.5 7.7 6.8c1.7-1.7 3.9-2.6 6.3-2.6s4.6.9 6.3 2.6c1.7 1.7 2.6 3.9 2.6 6.3s-.9 4.6-2.6 6.3c-1.7 1.7-3.9 2.6-6.3 2.6z"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/></svg>
-                <span>View More on GitHub</span>
-              </a>
-            </div>
+          </div>
+          <div class="mt-16 text-center">
+            <a href="https://github.com/Jayanth-1090" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center px-8 py-4 border-2 border-accent text-lg font-semibold rounded-full text-accent hover:bg-accent-hover hover:text-white transition-all duration-300 transform hover:-translate-y-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-3 h-6 w-6 group-hover:text-white"><path d="M15 22.1c-2.4 0-4.6-.9-6.3-2.6-1.7-1.7-2.6-3.9-2.6-6.3S6 8.5 7.7 6.8c1.7-1.7 3.9-2.6 6.3-2.6s4.6.9 6.3 2.6c1.7 1.7 2.6 3.9 2.6 6.3s-.9 4.6-2.6 6.3c-1.7 1.7-3.9 2.6-6.3 2.6z"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/></svg>
+              <span>View More on GitHub</span>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- Education Section -->
-      <section id="education" class="fade-in-section bg-gray-100 dark:bg-zinc-900 py-16 transition-colors duration-500">
+      <section id="education" class="fade-in-section bg-gray-50 dark:bg-gray-900 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
             Education
           </h2>
-          <div class="flex flex-col items-center justify-center">
-            <div class="bg-white dark:bg-zinc-800 p-6 rounded-xl shadow-lg text-center max-w-md w-full transition-all duration-300 hover:shadow-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text mx-auto h-12 w-12 text-blue-600 dark:text-blue-400 mb-4"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/><path d="M6 8h2"/><path d="M6 12h2"/><path d="M16 8h2"/><path d="M16 12h2"/></svg>
-              <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">B.E. in Computer Science & Engineering</h3>
-              <p class="text-gray-600 dark:text-gray-300 text-lg">Adichunchanagiri Institute of Technology</p>
+          <div class="max-w-xl mx-auto flex flex-col items-center justify-center">
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl card-shadow text-center w-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-text mx-auto text-accent mb-4"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/><path d="M6 8h2"/><path d="M6 12h2"/><path d="M16 8h2"/><path d="M16 12h2"/></svg>
+              <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-2">B.E. in Computer Science & Engineering</h3>
+              <p class="text-lg text-gray-600 dark:text-gray-400">Adichunchanagiri Institute of Technology</p>
               <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 italic">2018–2023</p>
             </div>
           </div>
@@ -319,58 +306,43 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="fade-in-section bg-white dark:bg-zinc-950 py-16 transition-colors duration-500">
+      <section id="contact" class="fade-in-section bg-white dark:bg-gray-950 py-24 transition-colors duration-500">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-100 mb-12">
-            Contact
+          <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-50 mb-16">
+            Get in Touch
           </h2>
-          <div class="flex flex-col items-center justify-center space-y-6">
+          <div class="flex flex-col items-center justify-center space-y-8">
             <p class="text-lg text-gray-700 dark:text-gray-300 text-center max-w-xl">
-              I am currently seeking new opportunities. Feel free to reach out to me with any inquiries or just to connect.
+              I am currently not open to new opportunities. Feel free to connect with me on the platforms below.
             </p>
-            <div class="flex space-x-4">
-              <a href="mailto:jayanthjayy12@gmail.com" class="p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-6 w-6"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div class="flex flex-wrap justify-center gap-6">
+              <a href="mailto:jayanthjayy12@gmail.com" class="group inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-full text-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-3 h-6 w-6 text-accent"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>Email</span>
               </a>
-              <a href="https://linkedin.com/in/jayanth-h-a-674400222" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-6 w-6"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 12 0v7h-4.5"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://www.linkedin.com/in/h-a-jayanth/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-full text-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin mr-3 h-6 w-6 text-accent"><path d="M16 8a6 6 0 0 0-6 6v7H6v-7a6 6 0 0 1 12 0v7h-4.5"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/jayanthjayy12" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 transform hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github h-6 w-6"><path d="M15 22.1c-2.4 0-4.6-.9-6.3-2.6-1.7-1.7-2.6-3.9-2.6-6.3S6 8.5 7.7 6.8c1.7-1.7 3.9-2.6 6.3-2.6s4.6.9 6.3 2.6c1.7 1.7 2.6 3.9 2.6 6.3s-.9 4.6-2.6 6.3c-1.7 1.7-3.9 2.6-6.3 2.6z"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/></svg>
+              <a href="https://github.com/Jayanth-1090" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-full text-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github mr-3 h-6 w-6 text-accent"><path d="M15 22.1c-2.4 0-4.6-.9-6.3-2.6-1.7-1.7-2.6-3.9-2.6-6.3S6 8.5 7.7 6.8c1.7-1.7 3.9-2.6 6.3-2.6s4.6.9 6.3 2.6c1.7 1.7 2.6 3.9 2.6 6.3s-.9 4.6-2.6 6.3c-1.7 1.7-3.9 2.6-6.3 2.6z"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/><path d="M9 11.2a1 1 0 0 1-1-1v-2"/></svg>
+                <span>GitHub</span>
               </a>
             </div>
-            <!-- Contact Form Placeholder -->
-            <form class="mt-8 w-full max-w-lg space-y-4 bg-gray-100 dark:bg-zinc-900 p-8 rounded-xl shadow-lg">
-              <input type="text" placeholder="Name" class="w-full p-3 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-              <input type="email" placeholder="Email" class="w-full p-3 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-              <textarea placeholder="Message" rows="4" class="w-full p-3 rounded-lg bg-white dark:bg-zinc-800 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-              <button type="submit" class="w-full px-6 py-3 bg-accent-orange text-white font-medium rounded-lg shadow-md hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
-                <div class="flex justify-center items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizonal mr-2 h-5 w-5"><path d="m3 3 3 9-3 9 19-9Z"/><path d="M6 12h16"/></svg>
-                  <span>Send Message</span>
-                </div>
-              </button>
-              <p class="text-center text-sm text-gray-500 dark:text-gray-400">
-                Note: This form requires a backend to function. For now, please use the direct email link.
-              </p>
-            </form>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-black text-gray-400 py-8 transition-colors duration-500">
+    <footer class="bg-gray-900 text-gray-400 py-8 transition-colors duration-500">
       <div class="container mx-auto px-4 text-center">
         <p>&copy; 2024 Jayanth H A. All rights reserved.</p>
-        <p class="mt-2 text-sm">
-          Designed and built with <span class="text-red-500">♥</span>
-        </p>
       </div>
     </footer>
 
     <!-- Scroll-to-Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 hidden" aria-label="Scroll to top">
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-accent text-white shadow-lg hover:bg-accent-hover transition-all duration-300 transform hover:scale-110 hidden" aria-label="Scroll to top">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up h-6 w-6"><path d="m18 15-6-6-6 6"/></svg>
     </button>
 
@@ -415,7 +387,6 @@
 
         // --- Scroll-to-Top Button Logic ---
         const scrollToTopButton = document.getElementById('scroll-to-top');
-
         window.addEventListener('scroll', () => {
           if (window.scrollY > 300) {
             scrollToTopButton.classList.remove('hidden');
@@ -423,7 +394,6 @@
             scrollToTopButton.classList.add('hidden');
           }
         });
-
         scrollToTopButton.addEventListener('click', () => {
           window.scrollTo({
             top: 0,
